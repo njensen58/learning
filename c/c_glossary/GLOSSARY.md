@@ -25,7 +25,7 @@
         `%d`: Intiger - whole number
         `%s`: String - Array of characters
         `%c`: Character - single character
-        `%x`: Memory Address in hexidecimal
+        `%x`: Memory Address in hexidecimal for a peice of data
         `%e`: Scientific Notation
         `%%`: Prints `%` in the string
         Can inclue conversion characters to customize data output:
@@ -143,6 +143,102 @@
 //////////////////////
 //  VARIABLE SCOPE  //
 //////////////////////
+    `Global`: Variables declared outside of functions are global and available to the entire program
+    `Local`: Variables declared in a function are local to that block
+        - arguments passed to functions the parameters act as local variables. Upon function exit, these local variables are destroyed.
+        - `Static Variables`: Have a local scopt but are not destoyed when a function is exited.  This means a static variable
+            `retains it's value for the life of the program` and can be accessed every time the funciton is  re-entered:
+            Example function with static variable:
+                `void say_hello();                           `
+                `                                            `
+                `int main() {                                `
+                `   int i;                                   `
+                `   for(i = 0; i < 5; i++){                  `
+                `       say_hello();                         `
+                `   }                                        `
+                `   return 0;                                `
+                `                                            `
+                `void say_hello() {                          `
+                `   static int num_calls = 1;                `
+                `   printf("Called times = %d\n", num_calls);`
+                `   num_calls++;                             `
+                `}                                           `
+                
+                
+////////////////
+//   ARRAYS   //
+////////////////   
+    Array: A data structure that stores a collection of related values that are all of the `same type`.
+            - An array is stored in contingous memory locations and `cannot change size after being declared`.
+        Declaration:  `int test_scores[25];`  // This array can hold up to 25 test score values
+        Initialize:   `float prices[3] = {3.2, 6.55, 10.49};` 
+            - Partial initialization: `float prices[5] = {2.2, 3.1};`
+        Accessing Array Elements: Same as JS  (an index of an array is also called a `subscript`)
+            Example: 
+                `int x[5] = {2, 3, 4, 5, 6};        `
+                `printf("3rd element is: %d", x[2]);`
+            Can also re-assign indexes like in JS:
+                `printf("%d", x[3]);`  Outputs: 5
+                `x[3] = 9;          `
+                `printf("%d", x[3]);`  Outputs: 9
+        Loops and Arrays:  Same as JS
+    Two Dimensional Arrays:  ( can have more than 2 dimensions just like JS)
+        Declaration: `int a[2][3];`  // Declares a 2 x 3 array
+            Example:
+                `int a[2][3] = {{1, 2, 3}, {4, 5, 6}};`
+        Accessing Array Elements: Same as JS
+                `printf("2nd sub-array\'s 2nd index: %d\n", a[1][1])`
+
+
+/////////////////
+//   POINTERS  //
+/////////////////
+    `&`:  The address of a variable if precedes a variable name
+        - A memory address is given in hexadecimal number.  A base-16 number system (0 - 9, A - F), that represent
+            a group of four binary digits that can have a value from 0 - 15
+                - It's much easier to read a hex number that is 8 characters long for 32 bits of memroty than to try to 
+                    decipher 32 1's and 0's in binary
+    `Pointers`: Very important in C!!
+        - They allow you to work with memory locations.  Fundamental to arrays, strings, and other data structures and algorithms
+        Definition: `A variable that contains the address of another variable, so it 'points' to the location`
+                        `assigned to a variable.`
+        Syntax:  `pointer_type *identifier`
+            `pointer_type`: The types of data the pointer will be pointing to. 
+                - The actual pointer data type is a hexadecimal number, but when declaring a pointer, you must indicate what type
+                    of data the pointer will be pointing to.
+                `*`: Declares a pointer and should appear next to the identifer used for the pointer variable.
+                    Examples:
+                        `int j = 63;                                    `
+                        `int *p = NULL;                                 `
+                        `p = &j;                                        `
+                        `printf("The address of j is %x\n", &j);        `
+                        `printf("p contains address %x\n", p);          `
+                        `printf("The value of j is %d\n", j);           `
+                        `printf("p is pointing to the value %d\n", *p); `
+                - Pointers should be initialized to `NULL` until assigned a valid location.
+                - Pointers can be assigned the address of a variable using the `&` sign.
+                - To see what a pointer is pointing to, use the `*` as in `*p`.
+                    - In this case, the `*` is called the inderication of `dereference operator`. Process is `dereferencing`
+                `**`: Pointer to a Pointer, can be used to be assigned the address of another pointer.
+                    Example:
+                        `int x = 12;        `
+                        `int *p = NULL;     `
+                        `int **ptr = NULL;  `
+                        `p = &x;            `
+                        `ptr = &p;          `
+        Pointers in Expressions:  Pointers can be used in expressions just as any variable.  Arithmetic operators can be applied to whatever
+            the pointer is pointing to.
+                Example:
+                    `int x = 5;          `
+                    `int y;              `
+                    `int *p = NULL;      `
+                    `p = &x;             `  // *p now points to x
+                    `y = *p + 2;         `  // y is assigned to 7
+                    `y += *p;            `  // y is assigned to 12
+                    `*p = y;             `  // x is assigned to 12
+                    `(*p)++;             `  // x is incremented to 13
+                NOTE:  `()` are required for the 
+
 
 
 
