@@ -1,0 +1,25 @@
+{
+  "name": "my-context-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^3.0.1",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "express-jwt": "^5.3.1",
+    "jsonwebtoken": "^8.3.0",
+    "mongoose": "^5.3.1",
+    "morgan": "^1.9.1"
+  },
+  "engines": {
+    "node": "10.11.0"
+  }
+}

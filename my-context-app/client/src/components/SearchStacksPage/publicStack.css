@@ -1,0 +1,27 @@
+.public-stacks-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 20px 0px;
+}
+
+.public-stacks-container > button {
+    position: absolute;
+    padding: 5px;
+    display: inline-block;
+}
+
+.public-stack {
+
+}
+
+.public-stack p:nth-child(1) {
+    font-size: 18px;
+}
+
+.public-stack p:nth-child(2) {
+    font-size: 12px;
+}
+
+.search-form form {
+    grid-column: 1;
+}

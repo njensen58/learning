@@ -1,0 +1,19 @@
+{
+  "name": "_3_Mocking_Basics",
+  "version": "1.0.0",
+  "description": "",
+  "main": "order_total.js",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "jest": "^23.6.0",
+    "node-fetch": "^2.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest",
+    "watch": "jest --watch *.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

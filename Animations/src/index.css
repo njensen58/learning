@@ -1,0 +1,154 @@
+/******************/
+/****** BASE ******/
+/******************/
+
+:root {
+  --lightGrey: #EEEEEE;
+  --darkGrey: #4A4A4A;
+  --lightPurple: #E5C8FB;
+  --purple: #A450E3;
+  --orange: #F5A623;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
+
+/******************/
+/**** keyframs ****/
+/******************/
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes grow {
+  0% { width: 10px; }
+  100% { width: 100px; }
+}
+
+@keyframes fadeInAndGrow {
+  0% { width: 10px; opacity: 0; }
+  100% { width: 100px; opacity: 1; }
+}
+
+/* @keyframes flicker {
+  0% { opacity: 0.3; }
+  9% { opacity: 0.4; }
+  25% { opacity: 0.5; }
+  35% { opacity: 0.6; }
+  45% { opacity: 0.9; }
+  65% { opacity: 0.7; }
+  71% { opacity: 0.4; }
+  79% { opacity: 0.7; }
+  85% { opacity: 0.9; }
+  90% { opacity: 0.6; }
+  95% { opacity: 0.5; }
+  97% { opacity: 0.4; }
+  100% { opacity: 0.3; }
+} */
+
+/******************/
+/* TRANSITIONS.js */
+/******************/
+
+.p {
+  font-size: 18px;
+  line-height: 22px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+}
+
+.a-button {
+  height: 40px;
+  width: 180px;
+  border-radius: 3px;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+  color: var(--purple);
+  border: 1px solid var(--purple);
+  transition: all 0.35s ease;
+}
+
+.a-button:hover {
+  color: white;
+  background-color: var(--purple);
+}
+
+.underline {
+  text-decoration: none;
+  position: relative;
+  color: var(--darkGrey);
+  transition: all 0.35s ease;
+}
+
+.underline::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: var(--purple);
+  transform: translateX(-50%);
+  transition: width 0.35s ease;
+}
+
+.underline:hover::after {
+  width: 100%;
+}
+
+.link {
+  color: var(--darkGrey);
+  transition: color 0.25s ease;
+}
+
+.link:hover {
+  color: var(--purple);
+}
+
+.close {
+  height: 40px;
+  width: 40px;
+  border: 1px solid var(--purple);
+  border-radius: 50px;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--purple);
+  font-size: 25px;
+}
+
+.close::before {
+  content: '';
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  top: 50%;
+  left: 50%;
+  border-radius: 50px;
+  transform: translate(-50%, -50%) scale(0.5);
+  border: 1px solid var(--purple);
+  transition: opacity 0.25s ease, transform 0.5s ease;
+  opacity: 0;
+}
+
+.close:hover::before {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/******************/
+/*** BARCHART.js **/
+/******************/
+
+
+/******************/
+/***** FORM.js ****/
+/******************/
