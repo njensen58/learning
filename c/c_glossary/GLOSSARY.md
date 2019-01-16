@@ -81,8 +81,8 @@
         `putchar(a);`         // output: "a"
     `puts()`:  used to display output as a string
         `char a[100];`
-        `gets(a);`
-        `printf("You entered: ");` // input: "Hello"
+        `gets(a);`                 // input: "Hello"
+        `printf("You entered: ");` 
         `puts(a);`                 // Output: "Hello"
     
 
