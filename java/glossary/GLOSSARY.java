@@ -29,7 +29,22 @@ Initializing:
         to it on initialization.
 
 
-
+/////////////
+// CLASSES //
+/////////////
+    Classes describe what an object will be.  It is not the object but rather an object Blueprint
+    Attributes and Behavior are defined in the blueprint - (class) to descibe the objects that can be made by using it
+        - See METHODS
+    //////////////////////
+    // CREATING CLASSES //
+    //////////////////////
+    Syntax    
+*        public class Animal {
+*            void bark(){
+*                System.out.println("Woof Woof");
+*            }
+*        }
+    This created a class - (blueprint) called Animal with a public method called bark that outputs "Woof Woof"
 
 //////////////////
 // CONDITIONALS //
@@ -48,6 +63,31 @@ while:
     -Same as JS
 do while:
     -Same as JS
+enhanced for: ( Also called a 'forEach' )
+    Syntax
+*    int[ ] numbers = {1, 2, 3, 4, 5}   
+*        for(int b: numbers){
+*            System.out.println(b)  //  1  2  3  4  5
+*        }
+
+/////////////
+// METHODS //
+/////////////
+Methods define behavoir in a class.  They are functions that can be `called` on an object instantiated with the class.
+    - Methods are called with ().  Such as  ' add(2, 3);'
+    Return Types:
+        - You must declare the type of data the method is expecting to return, such as String, int, boolean, or void
+            - void is used to declare the method should not return anything.
+
+
+///////////////////////////////////////
+// OOP - OBJECT ORIENTED PROGRAMMING //
+///////////////////////////////////////    
+OOP: Java used OOP, a programming style that is intended to make thinking about programmin closer to thinking about the real world.
+    - In OOP, each object is an indepenedent unit with a unique identity.
+    - Objects have Characteristics also called Attributes that define what the object Is
+    - Object Behavoir is defined by methods and describes what the Object Does
+
 
 ///////////////
 // OPERATORS //
@@ -83,9 +123,9 @@ Concatenation:
 ////////////////
 Scanner (object):
     -   The 'Scanner' object in Java is the most commonly used Java method for getting user input.
-    -   Must Import the Scanner object to use it's methods:
+    -   Must Import the Scanner object to use its methods:
 *            import java.util.Scanner;   
-    -   Must create a instance of Scanner obj to use it:
+    -  Must create a instance of Scanner obj to use it:
 *            Scanner myVar = new Scanner(System.in);
     - Some other Scanner methods available:
         nextByte()    = Read a byte
@@ -102,12 +142,12 @@ Scanner (object):
     
         import java.util.Scanner;
 
-        class MyClass {
-            public static void main(String[ ] args){
-                Scanner myVar = new Scanner(System.in);
-                System.out.println(myVar.nextLine());
-            }
-        }
+*        class MyClass {
+*            public static void main(String[ ] args){
+*                Scanner myVar = new Scanner(System.in);
+*                System.out.println(myVar.nextLine());
+*            }
+*        }
 
 
 ///////////////
