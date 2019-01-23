@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 
+
 const App = () => {
-    const [count, setCount] = useState(0)
+    const [count, setCount] = useState()
     const [characters, setCharacters] = useState([])
     const [color, setColor] = useState("blue")
     const styles = { width: 200, height: 200, backgroundColor: color }

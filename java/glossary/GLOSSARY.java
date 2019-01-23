@@ -38,13 +38,13 @@ Initializing:
     //////////////////////
     // CREATING CLASSES //
     //////////////////////
-    Syntax    
-*        public class Animal {
-*            void bark(){
-*                System.out.println("Woof Woof");
-*            }
-*        }
-    This created a class - (blueprint) called Animal with a public method called bark that outputs "Woof Woof"
+        Syntax    
+        *    public class Animal {
+        *        public void bark(){
+        *            System.out.println("Woof Woof");
+        *        }
+        *    }
+        This created a class - (blueprint) called Animal with a public method called bark that outputs "Woof Woof"
 
 //////////////////
 // CONDITIONALS //
@@ -125,28 +125,28 @@ Scanner (object):
     -   The 'Scanner' object in Java is the most commonly used Java method for getting user input.
     -   Must Import the Scanner object to use its methods:
 *            import java.util.Scanner;   
-    -  Must create a instance of Scanner obj to use it:
+    -   Must create a instance of Scanner obj to use it:
 *            Scanner myVar = new Scanner(System.in);
-    - Some other Scanner methods available:
-        nextByte()    = Read a byte
-        nextShort()   = Read a short 
-        nextInt()     = Read an int 
-        nextLong()    = Read a long 
-        nextFloat()   = Read a float
-        nextDouble()  = Read a double
-        nextBoolean() = Read a boolean
-        nextLine()    = Read a complete line
-        next()        = Read a word
+    -   Some other Scanner methods available:
+            nextByte()    = Read a byte
+            nextShort()   = Read a short 
+            nextInt()     = Read an int 
+            nextLong()    = Read a long 
+            nextFloat()   = Read a float
+            nextDouble()  = Read a double
+            nextBoolean() = Read a boolean
+            nextLine()    = Read a complete line
+            next()        = Read a word
 
     Example of getting user input:
     
-        import java.util.Scanner;
-
+*        import java.util.Scanner;
+*
 *        class MyClass {
 *            public static void main(String[ ] args){
 *                Scanner myVar = new Scanner(System.in);
 *                System.out.println(myVar.nextLine());
-*            }
+
 *        }
 
 

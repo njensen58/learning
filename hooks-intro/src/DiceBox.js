@@ -14,6 +14,7 @@ const DiceBox = (props) => {
 
     // Methods
     const dieNum = () => Math.ceil(Math.random() * 6)
+    
     const rollDie = () => {
         if (roll === (props.maxRoll || 3)) {
             setRoll(0)
