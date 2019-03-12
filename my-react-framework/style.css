@@ -1,3 +1,78 @@
-.myClass {
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    font-weight: lighter;
+    outline: none;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #222;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    height: 100px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+form input {
+    padding: 5px;
+    border-radius: 4px;
+    border: none;
+}
+
+form button {
+    padding: 5px;
+    border-radius: 4px;
+    border: none;
+}
+
+.list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.character-container {
     border: 1px solid black;
+    border-radius: 4px;
+    background-size: cover;
+    height: 200px;
+    background-position: center;
+    width: 250px;
+    margin: 5px auto;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.color-box {
+    width: 200px;
+    height: 200px;
+}
+
+@media only screen and (min-width: 500px){
+    .list-container {
+        width: 100vw;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr)
+    }
+}
+
+
+@media only screen and (min-width: 800px){
+    .list-container {
+        width: 100vw;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 0 10%;
+    }
 }

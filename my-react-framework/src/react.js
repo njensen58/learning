@@ -1,5 +1,5 @@
 (() => {
-
+    
     function anElement(element, props, children){
         // If the element is a class, create an instance of the class and return it's called render method to return the html
         if(isClass(element)){
@@ -23,18 +23,20 @@
         constructor(props){
             this.props = props
         }
-        setState(state){
+        setState(state, render){
             this.state = Object.assign({}, this.state, state)
-            reRender()
+            render && reRender()
         }
     }
 
     function reRender(){
         const rootDOMElement = document.getElementById('root')
         const rootReactElement = App
+        // Wipe out the DOM other than the 'root' div
         while(rootDOMElement.hasChildNodes()){
             rootDOMElement.removeChild(rootDOMElement.lastChild)
         }
+        // ReRender updated ReactDOMTree to actual DOM
         ReactDOM.render(rootReactElement, rootDOMElement)
     }
     
@@ -48,8 +50,13 @@
         render: (el, domEl) => {
             rootReactElement = el
             rootDOMElement = domEl
-            const currentDOM = rootReactElement.render()
-            rootDOMElement.appendChild(currentDOM)
+            if(rootReactElement.render){
+                const currentDOM = rootReactElement.render()
+                rootDOMElement.appendChild(currentDOM)
+            } else {
+                const currentDOM = rootReactElement
+                rootDOMElement.appendChild(currentDOM)
+            }
         }
     }
 
