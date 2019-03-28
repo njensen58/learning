@@ -14,7 +14,6 @@ function isStatelessComponent(el){
 }
 
 function handleClass(clazz, props, children){
-    console.log(clazz)
     classCounter++
     if(classMap[classCounter]){
         return classMap[classCounter]
