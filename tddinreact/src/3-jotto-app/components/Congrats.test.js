@@ -18,8 +18,6 @@ const setup = (props = {}) => {
 }
 
 
-
-
 test("renders without error", () => {
     const wrapper = setup()
     const component = findByTestAttr(wrapper, 'component-congrats')

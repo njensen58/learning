@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Signin from './Signin'
 import Game from './Game'
+import Chat from './Chat.js'
 import { Switch, Route } from 'react-router-dom'
 
 import openSocket from 'socket.io-client'
@@ -51,7 +52,7 @@ class App extends Component {
                     <Route 
                         path="/game" 
                         render={props => 
-                            <Game 
+                            <Chat 
                                 {...props}
                                 user={this.state.user}
                                 saveUserData={this.saveUserData}
